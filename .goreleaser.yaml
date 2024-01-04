@@ -31,6 +31,7 @@ dockers:
       - "0hlov3s/{{ .ProjectName }}:{{ .Version }}-amd64"
       - "0hlov3s/{{ .ProjectName }}:latest-amd64"
     build_flag_templates:
+      - "--builder=multi-platform"
       - "--platform=linux/amd64"
       - "--label=org.opencontainers.image.created={{.Date}}"
       - "--label=org.opencontainers.image.title={{.ProjectName}}"
@@ -43,6 +44,7 @@ dockers:
       - "0hlov3s/{{ .ProjectName }}:{{ .Version }}-arm64v8"
       - "0hlov3s/{{ .ProjectName }}:latest-arm64v8"
     build_flag_templates:
+      - "--builder=multi-platform"
       - "--platform=linux/arm64/v8"
       - "--label=org.opencontainers.image.created={{.Date}}"
       - "--label=org.opencontainers.image.title={{.ProjectName}}"
@@ -56,6 +58,7 @@ dockers:
       - "0hlov3s/{{ .ProjectName }}:{{ .Version }}-armv6"
       - "0hlov3s/{{ .ProjectName }}:latest-armv6"
     build_flag_templates:
+      - "--builder=multi-platform"
       - "--platform=linux/arm/v6"
       - "--label=org.opencontainers.image.created={{.Date}}"
       - "--label=org.opencontainers.image.title={{.ProjectName}}"
@@ -69,6 +72,7 @@ dockers:
       - "0hlov3s/{{ .ProjectName }}:{{ .Version }}-armv7"
       - "0hlov3s/{{ .ProjectName }}:latest-armv7"
     build_flag_templates:
+      - "--builder=multi-platform"
       - "--platform=linux/arm/v7"
       - "--label=org.opencontainers.image.created={{.Date}}"
       - "--label=org.opencontainers.image.title={{.ProjectName}}"
